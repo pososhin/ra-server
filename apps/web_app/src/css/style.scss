@@ -1,0 +1,51 @@
+:root {
+    --thing-size:3vh;
+}
+body {
+    margin: 0; 
+    height: 100%;
+    width: 100%;
+    
+}
+#root{
+    display: grid;
+    grid-template-columns: 80vh 1fr;
+}
+.map{
+    position: relative;;
+    height: 80vh;
+    width: 80vh;
+    background-color: rgb(192, 240, 137);
+}
+.players{
+    display: grid;
+    grid-template-rows: 9vh ;
+    grid-auto-rows: 9vh;
+    grid-row-gap: 1vh;
+}
+.player{
+    padding: 2vh;
+    font-size: 3.2vh;
+    background-color: rgba(240, 204, 137,0.5);
+    input{
+        height: 2.4vh;
+        background: rgba(0,0,0,0.1);
+        border: none;
+        font-size: 3vh;
+        &:hover{
+            background: rgba(255,255,255,0.1);
+        }
+    }
+    .player-id{
+        font-size: 1.9vh;
+    }
+    &.islocale{
+        background-color: rgb(240, 204, 137);
+    }
+    .bp3-input-group{
+        input{
+            border: none;
+            background: none;
+        }
+    }
+}

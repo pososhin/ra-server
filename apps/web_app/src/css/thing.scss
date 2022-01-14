@@ -1,0 +1,41 @@
+// top: `calc(${toy.y}% - var(--toy-size-loaded-${sSize}) / 2)`,
+// left: `calc(${toy.x}% - var(--toy-size-loaded-${sSize}) / 2)`,
+// height: `var(--toy-size-loaded-${sSize})`,
+// width: `var(--toy-size-loaded-${sSize})`,
+.things {
+  .thing-cover {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    width: 0;
+    height: 100%;
+    width: 100%;
+    .thing {
+      position: absolute;
+      background: black;
+      font-size: 2vh;
+      color: blanchedalmond;
+      height: var(--thing-size);
+      width: var(--thing-size);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &.things-player {
+    .thing-cover {
+      z-index: 10;
+      .thing {
+        background: darkblue;
+        color: blanchedalmond;
+        cursor: grab;
+        &:active {
+          border: 2px solid black;
+          background: blanchedalmond;
+          color: black;
+        }
+      }
+    }
+  }
+}
